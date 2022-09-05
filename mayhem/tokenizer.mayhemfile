@@ -1,0 +1,7 @@
+project: typos
+target: tokenizer
+
+cmds:
+  - cmd: /tokenizer
+  - cmd: /tokenizer_no_inst @@
+    libfuzzer: false
