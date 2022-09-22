@@ -411,7 +411,7 @@ impl Type {
         let (input, category) = Category::parse(input)?;
         let (input, tag) = nom::combinator::opt(Tag::parse)(input)?;
         let (input, num) = nom::combinator::opt(nom::character::streaming::digit1)(input)?;
-        let num = num.map(|s| s.parse().expect("parser ensured its a number"));
+        let num = num.and_then(|s| s.parse().ok());
         let t = Type { category, tag, num };
         Ok((input, t))
     }

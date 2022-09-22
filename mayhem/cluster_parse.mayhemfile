@@ -1,0 +1,7 @@
+project: typos
+target: cluster-parse
+
+cmds:
+  - cmd: /cluster_parse
+  - cmd: /cluster_parse_no_inst @@
+    libfuzzer: false
