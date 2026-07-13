@@ -1,0 +1,6 @@
+project: typos
+target: cluster-parse
+
+cmds:
+  - cmd: /mayhem/cluster_parse
+    libfuzzer: true

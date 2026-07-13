@@ -1,0 +1,6 @@
+project: typos
+target: tokenizer
+
+cmds:
+  - cmd: /mayhem/tokenizer
+    libfuzzer: true
